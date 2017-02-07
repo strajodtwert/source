@@ -57,7 +57,6 @@
             $.getScript('https://cdn.jsdelivr.net/sockjs/1.0.3/sockjs.min.js', loadSocket);
         } else loadSocket();
     }
-
     var sendToSocket = function () {
         var basicBotSettings = basicBot.settings;
         var basicBotRoom = basicBot.room;
@@ -99,7 +98,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/strajodtwert/source/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/basicBot/source/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -231,27 +230,27 @@
         return str;
     };
 
-    var botCreator = "strajo98";
+    var botCreator = "Yemasthui";
     var botMaintainer = "Benzi"
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "1.0.0",
+        version: "2.9.1",
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
+        scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srb.json",
+        chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "BalkanMusic",
-            language: "serbian",
-            chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srb.json",
-            scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
+            botName: "basicBot",
+            language: "english",
+            chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
+            scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -260,9 +259,9 @@
             autoskip: false,
             smartSkip: true,
             cmdDeletion: true,
-            maximumAfk: 70,
+            maximumAfk: 120,
             afkRemoval: true,
-            maximumDc: 15,
+            maximumDc: 60,
             bouncerPlus: true,
             blacklistEnabled: true,
             lockdownEnabled: false,
@@ -272,20 +271,20 @@
             maximumCycletime: 10,
             voteSkip: false,
             voteSkipLimit: 10,
-            historySkip: true,
+            historySkip: false,
             timeGuard: true,
-            maximumSongLength: 6,
+            maximumSongLength: 10,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            thorCommand: true,
+            thorCommand: false,
             thorCooldown: 10,
             skipPosition: 3,
             skipReasons: [
-                ["theme", "Ova pesma se ne uklapa u temu sobe. "],
-                ["op", "Ova pesma je na listi OP. "],
-                ["history", "Tvoja pesma je u DJ Istoriji. "],
-                ["mix", "Pustili ste miks, koji je u suprotnosti sa pravilima. "],
+                ["theme", "This song does not fit the room theme. "],
+                ["op", "This song is on the OP list. "],
+                ["history", "This song is in the history. "],
+                ["mix", "You played a mix, which is against the rules. "],
                 ["sound", "The song you played had bad sound quality or no sound. "],
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
                 ["unavailable", "The song you played was not available for some users. "]
@@ -301,12 +300,12 @@
             opLink: null,
             rulesLink: null,
             themeLink: null,
-            fbLink: "https://www.facebook.com/BalkanMusic-plugdj-257136237998524/",
+            fbLink: null,
             youtubeLink: null,
-            website: "https://strajosrb.wixsite.com/balkanmusic",
+            website: null,
             intervalMessages: [],
             messageInterval: 5,
-            songstats: false,
+            songstats: true,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json",
@@ -1287,7 +1286,7 @@
             spam: [
                 'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
                 'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
-                'hitler', 'to', 'ahsu', 'haha', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
+                'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
@@ -1498,7 +1497,6 @@
                                 if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                 if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
                                 else{
-
                                 }
                         }
                 },
@@ -2046,9 +2044,7 @@
             },
 
             /*
-
             // This does not work anymore.
-
             deletechatCommand: {
                 command: 'deletechat',
                 rank: 'mod',
@@ -2069,18 +2065,15 @@
                         for (var i = 0; i < chats.length; i++) {
                             var n = from[i].textContent;
                             if (name.trim() === n.trim()) {
-
                                 // var messagecid = $(message)[i].getAttribute('data-cid');
                                 // var emotecid = $(emote)[i].getAttribute('data-cid');
                                 // API.moderateDeleteChat(messagecid);
-
                                 // try {
                                 //     API.moderateDeleteChat(messagecid);
                                 // }
                                 // finally {
                                 //     API.moderateDeleteChat(emotecid);
                                 // }
-
                                 if (typeof $(message)[i].getAttribute('data-cid') == "undefined"){
                                     API.moderateDeleteChat($(emote)[i].getAttribute('data-cid')); // works well with normal messages but not with emotes due to emotes and messages are seperate.
                                 } else {
@@ -2092,7 +2085,6 @@
                     }
                 }
             },
-
             */
 
             deletechatCommand: {
