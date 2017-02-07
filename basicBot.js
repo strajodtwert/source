@@ -231,7 +231,7 @@
         return str;
     };
 
-    var botCreator = "Yemasthui";
+    var botCreator = "strajo98";
     var botMaintainer = "Benzi"
     var botCreatorIDs = ["3851534", "4105209"];
 
@@ -242,15 +242,15 @@
         loggedInID: null,
         scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/strajodtwert/source/master/lang/cro.json",
+        chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srb.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "BalkanMusic",
-            language: "croatian",
-            chatLink: "https://rawgit.com/strajodtwert/source/master/lang/cro.json",
+            language: "serbian",
+            chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srb.json",
             scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
@@ -301,12 +301,12 @@
             opLink: null,
             rulesLink: null,
             themeLink: null,
-            fbLink: null,
+            fbLink: "https://www.facebook.com/BalkanMusic-plugdj-257136237998524/",
             youtubeLink: null,
-            website: null,
+            website: "https://strajosrb.wixsite.com/balkanmusic",
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: "!",
             blacklists: {
                 NSFW: "https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json",
@@ -1287,7 +1287,7 @@
             spam: [
                 'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
                 'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
-                'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
+                'hitler', 'to', 'ahsu', 'haha', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
