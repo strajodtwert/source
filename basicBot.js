@@ -236,7 +236,7 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.9.1",
+        version: "1.0.0",
         status: false,
         name: "basicBot",
         loggedInID: null,
@@ -248,8 +248,8 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
-            language: "serbian",
+            botName: "BalkanMusic",
+            language: "croatian",
             chatLink: "https://rawgit.com/strajodtwert/source/master/lang/cro.json",
             scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
