@@ -38,7 +38,7 @@
     "error_hidecommands": ":warning: Use %%CMDTRIGGER%%hidecommands on/off",
     "error_skiphistory": ":warning: Use %%CMDTRIGGER%%skiphistory on/off",
     "error_dc": ":warning: You were not found in the database.",
-    "help": "All commands are here: https://nbot-nakituminajasi.c9users.io/#commands",
+    "help": "Sve komande su tu: https://origem-bot.tk/#commands",
     "room_stats": "Room stats:",
     "lang_changed": ":white_check_mark: Jezik je uspešno promenjen!",
     "roll": "valjan",
