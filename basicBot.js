@@ -486,9 +486,9 @@
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srb.json",
         chat: null,
-        loadChat: "loadChat",
-        retrieveSettings: "retrieveSettings",
-        retrieveFromStorage: "retrieveFromStorage",
+        loadChat: loadChat,
+        retrieveSettings: retrieveSettings,
+        retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "BalkanMusicBOT",
             language: "serbian",
