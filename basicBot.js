@@ -241,7 +241,7 @@
         loggedInID: null,
         scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srb.json",
+        chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srbj.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -249,7 +249,7 @@
         settings: {
             botName: "BalkanMusicBOT",
             language: "serbian",
-            chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srb.json",
+            chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srbj.json",
             scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
