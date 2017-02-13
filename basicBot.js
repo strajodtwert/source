@@ -98,7 +98,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/strajodtwert/source/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/basicBot/source/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -235,22 +235,22 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "1.0",
+        version: "2.9.1",
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
+        scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srbj.json",
+        chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "BalkanMusicBOT",
-            language: "serbian",
-            chatLink: "https://rawgit.com/strajodtwert/source/master/lang/srbj.json",
-            scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
+            botName: "basicBot",
+            language: "english",
+            chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
+            scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -259,7 +259,7 @@
             autoskip: false,
             smartSkip: true,
             cmdDeletion: true,
-            maximumAfk: 125,
+            maximumAfk: 120,
             afkRemoval: true,
             maximumDc: 60,
             bouncerPlus: true,
@@ -269,21 +269,21 @@
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: true,
-            voteSkipLimit: 5,
-            historySkip: true,
+            voteSkip: false,
+            voteSkipLimit: 10,
+            historySkip: false,
             timeGuard: true,
-            maximumSongLength: 6,
+            maximumSongLength: 10,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            thorCommand: true,
+            thorCommand: false,
             thorCooldown: 10,
             skipPosition: 3,
             skipReasons: [
-                ["theme", "Ta pesma nije u skladu sa temom sobe. "],
-                ["op", "Ta pesma je na OP listi. "],
-                ["history", "Ta pesma je u Dj istoriji. "],
+                ["theme", "This song does not fit the room theme. "],
+                ["op", "This song is on the OP list. "],
+                ["history", "This song is in the history. "],
                 ["mix", "You played a mix, which is against the rules. "],
                 ["sound", "The song you played had bad sound quality or no sound. "],
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
@@ -300,9 +300,9 @@
             opLink: null,
             rulesLink: null,
             themeLink: null,
-            fbLink: "https://www.facebook.com/BalkanMusic-plugdj-257136237998524",
+            fbLink: null,
             youtubeLink: null,
-            website: "https://strajosrb.wixsite.com/balkanmusic",
+            website: null,
             intervalMessages: [],
             messageInterval: 5,
             songstats: true,
