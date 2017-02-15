@@ -98,7 +98,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/basicBot/source/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/strajodtwert/source/master/lang/LangIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -235,9 +235,9 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.9.1",
+        version: "1.0.0",
         status: false,
-        name: "basicBot",
+        name: "BalkanMusicBOT",
         loggedInID: null,
         scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
@@ -248,20 +248,20 @@
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "BalkanMusicBOT",
-            language: "english",
+            language: "serbian",
             chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
             scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
+            startupEmoji: true, // true or false
             autowoot: true,
             autoskip: false,
             smartSkip: true,
             cmdDeletion: true,
-            maximumAfk: 120,
+            maximumAfk: 90,
             afkRemoval: true,
-            maximumDc: 60,
+            maximumDc: 30,
             bouncerPlus: true,
             blacklistEnabled: true,
             lockdownEnabled: false,
@@ -269,11 +269,11 @@
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: false,
-            voteSkipLimit: 10,
-            historySkip: false,
+            voteSkip: true,
+            voteSkipLimit: 5,
+            historySkip: true,
             timeGuard: true,
-            maximumSongLength: 10,
+            maximumSongLength: 6,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
