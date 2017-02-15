@@ -20,7 +20,7 @@
         "daje ti kolacic duginih boja napraljen sa lubljavlju :heart:",
         "daje stari kolačić koji je ostavio na kiši, to je buđavi kolacic.",
         "peče ti sveže kolačiće, mirise neverovatno."
-    ],
+        ],
     "balls": [
         "Znaci ukazuju na da.",
         "Da.",
@@ -204,7 +204,7 @@
     "youtube": "\/me [%%NAME%%] Pretplatite se na na\u0161 YouTube kanal: %%LINK%%",
     "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
     "thorNotClose": "\/me @%%NAME%%, Nisi vredan da budes u blizini cekica :hammer:!",
-    "thorcd": "\/me @%%NAME%% možete pokušati da podigne čekić za  %%TIME%% minuta.",
+    "thorcd": "\/me @%%NAME%% možete pokušati da podigne čekić za %%TIME%% minuta.",
     "thorWorthy": "\/me @%%NAME%% dostojan si cekica :hammer:, Cestitke!",
-    "thorNotWorthy": "\/me @%%NAME%% Nisi dostojan cekica."
+    "thorNotWorthy": "\/me @%%NAME%% nisi dostojan cekica, pokusaj ponovo.."
 }
