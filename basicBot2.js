@@ -248,7 +248,7 @@
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "BalkanMusicBOT",
-            language: "english",
+            language: "serbian",
             chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
             scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
