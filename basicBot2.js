@@ -239,7 +239,7 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
+        scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot2.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
         chat: null,
@@ -250,7 +250,7 @@
             botName: "BalkanMusicBOT",
             language: "english",
             chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
-            scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
+            scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot2.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
