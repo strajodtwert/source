@@ -1,4 +1,3 @@
-
 /**
  *Copyright 2015 basicBot
  *Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
@@ -242,15 +241,15 @@
         loggedInID: null,
         scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
+        chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "BalkanMusicBOT",
-            language: "english",
-            chatLink: "https://rawgit.com/basicBot/source/master/lang/en.json",
+            language: "serbian",
+            chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
             scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
