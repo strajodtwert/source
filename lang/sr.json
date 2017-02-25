@@ -181,7 +181,7 @@
     "unmuted": "\/me [@%%NAME%%] Je unmutovao @%%USERNAME%%.",
     "muterank": "\/me [@%%NAME%%] Ne mo\u017ee\u0161 mute osobu sa istim ili ve\u0107im rankom od tebe.",
     "oplist": "\/me OP lista: %%LINK%%",
-    "pong": "\/me Pong!",
+    "ping": "\/me Pong!",
     "reload": "\/me Vra\u0107am se ubrzo.",
     "removenotinwl": "\/me [@%%NAME%%] Navedeni korisnik @%%USERNAME%% nije na listi \u010dekanja.",
     "roomrules": "\/me Pravila sobe mozes prona\u0107i ovde: %%LINK%%",
