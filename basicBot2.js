@@ -230,8 +230,8 @@
         return str;
     };
 
-    var botCreator = "Yemasthui";
-    var botMaintainer = "Benzi"
+    var botCreator = "Strajo98";
+    var botMaintainer = "Strajo98"
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
@@ -269,7 +269,7 @@
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: false,
+            voteSkip: true,
             voteSkipLimit: 5,
             historySkip: false,
             timeGuard: true,
@@ -281,13 +281,13 @@
             thorCooldown: 10,
             skipPosition: 3,
             skipReasons: [
-                ["theme", "This song does not fit the room theme. "],
-                ["op", "This song is on the OP list. "],
-                ["history", "This song is in the history. "],
-                ["mix", "You played a mix, which is against the rules. "],
-                ["sound", "The song you played had bad sound quality or no sound. "],
+                ["theme", "Ova pesma se ne uklapa u temu sobe. "],
+                ["op", "Ova pesma je u OP listi. "],
+                ["history", "Ova pesma je u istoriji. "],
+                ["mix", "pustili ste miks, koji je u suprotnosti sa pravilima. "],
+                ["sound", "Tvoja pesma ima loš kvalitet zvuka ili bez zvuka. "],
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
-                ["unavailable", "The song you played was not available for some users. "]
+                ["unavailable", "Pesma koju si pustio nije dostupna za neke igrace. "]
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
