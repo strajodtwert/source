@@ -230,7 +230,7 @@
         return str;
     };
 
-    var botCreator = "Strajo98";
+    var botCreator = "Yamatachi";
     var botMaintainer = "Strajo98"
     var botCreatorIDs = ["3851534", "4105209"];
 
