@@ -291,7 +291,7 @@
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
-            motdEnabled: false,
+            motdEnabled: true,
             motdInterval: 5,
             motd: "Temporary Message of the Day",
             filterChat: true,
@@ -365,7 +365,7 @@
             roulette: {
                 rouletteStatus: false,
                 participants: [],
-                countdown: null,
+                countdown: 30,
                 startRoulette: function () {
                     basicBot.room.roulette.rouletteStatus = true;
                     basicBot.room.roulette.countdown = setTimeout(function () {
