@@ -240,7 +240,7 @@
         name: "basicBot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
-        cmdLink: "http://git.io/245Ppg",
+        cmdLink: "https://balkanmusicbotkomande.000webhostapp.com/",
         chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
         chat: null,
         loadChat: loadChat,
