@@ -267,7 +267,7 @@
             historySkip: true,
             timeGuard: true,
             maximumSongLength: 6,
-            autodisable: false,
+            autodisable: true,
             commandCooldown: 30,
             usercommandsEnabled: true,
             thorCommand: true,
@@ -322,8 +322,7 @@
             autodisableInterval: null,
             autodisableFunc: function () {
                 if (basicBot.status && basicBot.settings.autodisable) {
-                    API.sendChat('!afkdisable');
-                    API.sendChat('!joindisable');
+                    API.sendChat('!roulette');
                 }
             },
             queueing: 0,
@@ -1645,7 +1644,7 @@
             },
 
             autodisableCommand: {
-                command: 'autodisable',
+                command: 'autorulet',
                 rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
