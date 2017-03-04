@@ -1644,7 +1644,7 @@
             },
 
             autodisableCommand: {
-                command: 'autorulet',
+                command: 'autodisable',
                 rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2849,7 +2849,7 @@
                     }
                 }
             },
-            
+
             refreshCommand: {
                 command: 'refresh',
                 rank: 'manager',
@@ -3085,7 +3085,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat('/me Bot je napravljen od strance ' + botCreator + ', ali sada ga odrzava ' + botMaintainer + ".");
+                        API.sendChat('/me This bot was created by ' + botCreator + ', but is now maintained by ' + botMaintainer + ".");
                     }
                 }
             },
