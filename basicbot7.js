@@ -1644,7 +1644,7 @@
             },
 
             autodisableCommand: {
-                command: 'autodisable',
+                command: 'autorulet',
                 rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
