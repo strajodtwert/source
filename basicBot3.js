@@ -2850,8 +2850,6 @@
                 }
             },
             
-           
-
             refreshCommand: {
                 command: 'refresh',
                 rank: 'manager',
