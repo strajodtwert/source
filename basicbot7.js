@@ -240,7 +240,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "BalkanMusicBOT",
             language: "serbian",
             chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
             scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
