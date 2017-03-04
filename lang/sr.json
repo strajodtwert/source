@@ -71,7 +71,7 @@
     "timelimit": "\/me @%%NAME%%, :heavy_exclamation_mark: Tvoja pesma je duza od %%MAXLENGTH%% minuta, potrebna ti je dozvola da pustas duze pesme :heavy_exclamation_mark:.",
     "permissionownsong": "\/me :up: @%%NAME%% ima dozvolu da pu\u0161ta svoju vlastitu pesmu.",
     "isblacklisted": "\/me Ova pesma je na %%BLACKLIST%% blacklisti! Prebacujem....",
-    "isopen": "\/me :white_check_mark: Rulet je upravo pokrenut od strane [%%NAME%%], Napi\u0161i !join da u\u010destvuje\u0161 (Ko pobedi bice premesten na prvo mesto na waitlisti) :white_check_mark:.",
+    "isopen": "\/me :white_check_mark: Rulet je upravo pokrenut, Napi\u0161i !join da u\u010destvuje\u0161 (Ko pobedi bice premesten na prvo mesto na waitlisti) :white_check_mark:.",
     "winnerpicked": "\/me :white_check_mark: Pobednik je odabran! @%%NAME%% na poziciju %%POSITION%% :white_check_mark:.",
     "ball": "\/me %%NAME%% je pitao: \"%%QUESTION%%\" i %%BOTNAME%% odgovara: \"%%RESPONSE%%\"",
     "notghosting": "[%%NAME1%%] %%NAME2%% nije zabagovan.",
