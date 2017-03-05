@@ -224,11 +224,11 @@
     };
 
     var botCreator = "Yemasthui";
-    var botMaintainer = ""
+    var botMaintainer = "strajo98"
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "1.1.2",
+        version: "1.1.3",
         status: false,
         name: "BalanMusicBOT",
         loggedInID: null,
@@ -291,7 +291,7 @@
             etaRestriction: false,
             welcome: true,
             opLink: null,
-            rulesLink: null,
+            rulesLink: "U opisu sobe :D",
             themeLink: null,
             fbLink: "https://www.facebook.com/BalkanMusic-plugdj-257136237998524/",
             youtubeLink: null,
