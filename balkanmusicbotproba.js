@@ -1958,7 +1958,7 @@
             },
             
             cookieCommand: {
-                command: 'cookie',
+                command: 'truth',
                 rank: 'user',
                 type: 'startsWith',
                 getCookie: function (chat) {
