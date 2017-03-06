@@ -1,4 +1,5 @@
-(function () {
+
+            (function () {
 
     /*window.onerror = function() {
         var room = JSON.parse(localStorage.getItem("basicBotRoom"));
@@ -232,11 +233,11 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "1.1.3",
+        version: "1.1.4",
         status: false,
         name: "BalanMusicBOT",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
+        scriptLink: "https://rawgit.com/strajodtwert/source/master/balkanmusicbot.js",
         cmdLink: "https://balkanmusicbotkomande.000webhostapp.com/",
         chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
         chat: null,
@@ -247,7 +248,7 @@
             botName: "BalkanMusicBOT",
             language: "serbian",
             chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
-            scriptLink: "https://rawgit.com/strajodtwert/source/master/basicBot.js",
+            scriptLink: "https://rawgit.com/strajodtwert/source/master/balkanmusicbot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 100, // 1-200
             startupVolume: 0, // 0-100
@@ -3697,31 +3698,31 @@
                 rank: 'user',
                 type: 'startsWith',
                 getTruth: function (chat) {
-                    var c = Math.floor(Math.random() * bBot.chat.Truths.length);
-                    return bBot.chat.Truths[c];
+                    var c = Math.floor(Math.random() * bmBot.chat.Truths.length);
+                    return bmBot.chat.Truths[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!bBot.commands.executable(this.rank, chat)) return void (0);
+                    if (!bmBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         var msg = chat.message;
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(subChat(bBot.chat.truth, {name: chat.un, fortune: this.getTruth()}));
+                            API.sendChat(subChat(bmBot.chat.truth, {name: chat.un, fortune: this.getTruth()}));
                             return false;
                         }
                         else {
                             var name = msg.substring(space + 2);
-                            var user = bBot.userUtilities.lookupUserName(name);
+                            var user = bmBot.userUtilities.lookupUserName(name);
                             if (user === false || !user.inRoom) {
-                                return API.sendChat(subChat(bBot.chat.trutherror, {name: name}));
+                                return API.sendChat(subChat(bmBot.chat.trutherror, {name: name}));
                             }
                             else if (user.username === chat.un) {
-                                return API.sendChat(subChat(bBot.chat.trutherror, {name: name}));
+                                return API.sendChat(subChat(bmBot.chat.trutherror, {name: name}));
                             }
                             else {
-                                return API.sendChat(subChat(bBot.chat.trutherror, {name: name}));
+                                return API.sendChat(subChat(bmBot.chat.trutherror, {name: name}));
                             }
                         }
                     }
@@ -3729,12 +3730,12 @@
             },
             
             loveCommand: {
-			command: ['love'],
+			command: 'love',
 			rank: 'user',
 			type: 'exact',
 			functionality: function(chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-				if (!BMBot.commands.executable(this.rank, chat)) return void(0);
+				if (!bmBot.commands.executable(this.rank, chat)) return void(0);
 				else {
 					var love = ""
 
@@ -3747,6 +3748,7 @@
 			}
 		},
             
+            
                 
             
             fortunecookieCommand: {
@@ -3755,11 +3757,11 @@
                 type: 'startsWith',
                 getFcookie: function (chat) {
                     var c = Math.floor(Math.random() * BMBot.chat.fcookies.length);
-                    return BMBot.chat.fcookies[c];
+                    return bmBot.chat.fcookies[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!BMBot.commands.executable(this.rank, chat)) return void (0);
+                    if (!bmBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         var msg = chat.message;
 
@@ -3770,7 +3772,7 @@
                         }
                         else {
                             var name = msg.substring(space + 2);
-                            var user = bBot.userUtilities.lookupUserName(name);
+                            var user = bmBot.userUtilities.lookupUserName(name);
                             if (user === false || !user.inRoom) {
                                 return API.sendChat(subChat(BMBot.chat.selffortuneccookie, {name: name}));
                             }
