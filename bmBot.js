@@ -236,7 +236,7 @@
         status: false,
         name: "BalanMusicBOT",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/strajodtwert/source/master/balkanmusicbot.js",
+        scriptLink: "https://rawgit.com/strajodtwert/source/master/bmBot.js",
         cmdLink: "https://balkanmusicbotkomande.000webhostapp.com/",
         chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
         chat: null,
@@ -247,7 +247,7 @@
             botName: "BalkanMusicBOT",
             language: "serbian",
             chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
-            scriptLink: "https://rawgit.com/strajodtwert/source/master/balkanmusicbot.js",
+            scriptLink: "https://rawgit.com/strajodtwert/source/master/bmBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 100, // 1-200
             startupVolume: 0, // 0-100
