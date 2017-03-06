@@ -1,5 +1,4 @@
-
-            (function () {
+(function () {
 
     /*window.onerror = function() {
         var room = JSON.parse(localStorage.getItem("basicBotRoom"));
@@ -3693,13 +3692,11 @@
                 }
             },
             
-            
-		
-	TruthCommand: {
-	        command: 'truth',
+            TruthCommand: {
+                command: 'truth',
                 rank: 'user',
                 type: 'startsWith',
-                getCookie: function (chat) {
+                getTruth: function (chat) {
                     var c = Math.floor(Math.random() * basicBot.chat.Truths.length);
                     return basicBot.chat.Truths[c];
                 },
@@ -3714,7 +3711,6 @@
                             API.sendChat(subChat(basicBot.chat.truth, {name: chat.un, fortune: this.getTruth()}));
                             return false;
                         }
-                  }
                         else {
                             var name = msg.substring(space + 2);
                             var user = basicBot.userUtilities.lookupUserName(name);
@@ -3733,7 +3729,7 @@
             },
             
             loveCommand: {
-			command: 'love',
+			command: ['love'],
 			rank: 'user',
 			type: 'exact',
 			functionality: function(chat, cmd) {
@@ -3750,7 +3746,6 @@
 				}
 			}
 		},
-            
             
                 
             
