@@ -325,5 +325,5 @@
     "thorcd": "\/me @%%NAME%% možete pokušati da podigne čekić za %%TIME%% minuta.",
     "thorWorthy": "\/me @%%NAME%% dostojan si cekica :hammer:, Cestitke!",
     "thorNotWorthy": "\/me @%%NAME%% nisi dostojan cekica, pokusaj ponovo.",
-    "fcookie": "/me %%NAME%% %%FORTUNE%%",
+    "fcookie": "/me %%NAME%% %%FORTUNE%%"
 }
