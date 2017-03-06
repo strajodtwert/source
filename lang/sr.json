@@ -173,7 +173,6 @@
         "Zaboravi na to."
     ],
     
-    
     "nodatafound": "Prethodni podaci nisu prona\u0111eni.",
     "currentlang": "\/me Jezik podesen na: %%LANGUAGE%%",
     "langerror": "\/me Jezik koji ste odabrali nije dostupan. Poseti %%LINK%% da bi pronasao dostupne jezike.",
@@ -197,6 +196,7 @@
     "ghosting": "[%%NAME1%%] %%NAME2%% je zabagovan ili nije tu.",
     "alreadyadding": "\/me Korisnik je ve\u0107 dodan! Promenjena \u017eeljena pozicija na %%POSITION%%.",
     "adding": "\/me Dodan @%%NAME%% u red. Trenutna pozicija %%POSITION%%.",
+    "truth": "/me [!truth] %%NAME%% %%FORTUNE%%",
     "usernotfound": "\/me Korisnik nije prona\u0111en.",
     "notdisconnected": "\/me @%%NAME%% se nije diskonektovao tokom mog  boravka ovde.",
     "noposition": "\/me Zadnja pozicija nepoznata. Listu cekanja treba a\u017eurirati najmanje jednom da bi se registrovala zadnja pozicija korisnika.",
@@ -325,5 +325,6 @@
     "thorNotClose": "\/me @%%NAME%%, Nisi vredan da budes u blizini cekica :hammer:!",
     "thorcd": "\/me @%%NAME%% možete pokušati da podigne čekić za %%TIME%% minuta.",
     "thorWorthy": "\/me @%%NAME%% dostojan si cekica :hammer:, Cestitke!",
-    "thorNotWorthy": "\/me @%%NAME%% nisi dostojan cekica, pokusaj ponovo.."
+    "thorNotWorthy": "\/me @%%NAME%% nisi dostojan cekica, pokusaj ponovo."
+    "fcookie": "/me %%NAME%% %%FORTUNE%%",
 }
