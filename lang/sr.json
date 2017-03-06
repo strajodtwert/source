@@ -209,5 +209,5 @@
     "thorNotClose": "\/me @%%NAME%%, Nisi vredan da budes u blizini cekica :hammer:!",
     "thorcd": "\/me @%%NAME%% možete pokušati da podigne čekić za %%TIME%% minuta.",
     "thorWorthy": "\/me @%%NAME%% dostojan si cekica :hammer:, Cestitke!",
-    "thorNotWorthy": "\/me @%%NAME%% nisi dostojan cekica, pokusaj ponovo.",
+    "thorNotWorthy": "\/me @%%NAME%% nisi dostojan cekica, pokusaj ponovo."
 }
