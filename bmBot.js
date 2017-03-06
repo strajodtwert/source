@@ -3693,36 +3693,39 @@
                 }
             },
             
-            TruthCommand: {
-                command: 'truth',
+            
+		
+	TruthCommand: {
+	        command: 'truth',
                 rank: 'user',
                 type: 'startsWith',
-                getTruth: function (chat) {
-                    var c = Math.floor(Math.random() * bmBot.chat.Truths.length);
-                    return bmBot.chat.Truths[c];
+                getCookie: function (chat) {
+                    var c = Math.floor(Math.random() * basicBot.chat.Truths.length);
+                    return basicBot.chat.Truths[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!bmBot.commands.executable(this.rank, chat)) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         var msg = chat.message;
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(subChat(bmBot.chat.truth, {name: chat.un, fortune: this.getTruth()}));
+                            API.sendChat(subChat(basicBot.chat.truth, {name: chat.un, fortune: this.getTruth()}));
                             return false;
                         }
+                  }
                         else {
                             var name = msg.substring(space + 2);
-                            var user = bmBot.userUtilities.lookupUserName(name);
+                            var user = basicBot.userUtilities.lookupUserName(name);
                             if (user === false || !user.inRoom) {
-                                return API.sendChat(subChat(bmBot.chat.trutherror, {name: name}));
+                                return API.sendChat(subChat(basicBot.chat.trutherror, {name: name}));
                             }
                             else if (user.username === chat.un) {
-                                return API.sendChat(subChat(bmBot.chat.trutherror, {name: name}));
+                                return API.sendChat(subChat(basicBot.chat.trutherror, {name: name}));
                             }
                             else {
-                                return API.sendChat(subChat(bmBot.chat.trutherror, {name: name}));
+                                return API.sendChat(subChat(basicBot.chat.trutherror, {name: name}));
                             }
                         }
                     }
@@ -3735,7 +3738,7 @@
 			type: 'exact',
 			functionality: function(chat, cmd) {
 				if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-				if (!bmBot.commands.executable(this.rank, chat)) return void(0);
+				if (!basicBot.commands.executable(this.rank, chat)) return void(0);
 				else {
 					var love = ""
 
@@ -3756,31 +3759,31 @@
                 rank: 'user',
                 type: 'startsWith',
                 getFcookie: function (chat) {
-                    var c = Math.floor(Math.random() * BMBot.chat.fcookies.length);
-                    return bmBot.chat.fcookies[c];
+                    var c = Math.floor(Math.random() * basicBot.chat.fcookies.length);
+                    return basicBot.chat.fcookies[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!bmBot.commands.executable(this.rank, chat)) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         var msg = chat.message;
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(subChat(BMBot.chat.fortunecookie, {name: chat.un, fortune: this.getFcookie()}));
+                            API.sendChat(subChat(basicBot.chat.fortunecookie, {name: chat.un, fortune: this.getFcookie()}));
                             return false;
                         }
                         else {
                             var name = msg.substring(space + 2);
-                            var user = bmBot.userUtilities.lookupUserName(name);
+                            var user = basicBot.userUtilities.lookupUserName(name);
                             if (user === false || !user.inRoom) {
-                                return API.sendChat(subChat(BMBot.chat.selffortuneccookie, {name: name}));
+                                return API.sendChat(subChat(basicBot.chat.selffortuneccookie, {name: name}));
                             }
                             else if (user.username === chat.un) {
-                                return API.sendChat(subChat(BMBot.chat.selffortuneccookie, {name: name}));
+                                return API.sendChat(subChat(basicBot.chat.selffortuneccookie, {name: name}));
                             }
                             else {
-                                return API.sendChat(subChat(BMBot.chat.selffortuneccookie, {name: name}));
+                                return API.sendChat(subChat(basicBot.chat.selffortuneccookie, {name: name}));
                             }
                         }
                     }
