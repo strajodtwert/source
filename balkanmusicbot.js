@@ -215,12 +215,153 @@
         return m;
     };
 
+    
+    //Slots---------------------------------------------------------------------------------------------------------------------------
+        function spinSlots() {
+            var slotArray = [':lemon:',
+                             ':tangerine:', 
+                             ':strawberry:', 
+                             ':pineapple:', 
+                             ':apple:', 
+                             ':grapes:', 
+                             ':watermelon:', 
+                             ':cherries:', 
+                             ':green_heart:', 
+                             ':bell:', 
+                             ':gem:', 
+                             ':green_apple:'];
+            var slotValue = [1.5, 
+                             2, 
+                             2.5, 
+                             3, 
+                             3.5, 
+                             4, 
+                             4.5, 
+                             5, 
+                             5.5, 
+                             6, 
+                             6.5, 
+                             7];    
+            var rand =  Math.floor(Math.random() * (slotArray.length));                
+            return [slotArray[rand], slotValue[rand]]; 
+        }
+        
+        function spinOutcome(bet) {
+            var winnings;
+            var outcome1 = spinSlots(); 
+            var outcome2 = spinSlots();
+            var outcome3 = spinSlots();   
+
+            //Determine Winnings
+            if (outcome1[0] == outcome2[0] && outcome1[0] == outcome3[0]) {
+                winnings = Math.round(bet * outcome1[1]);
+            }
+            else if (outcome1[0] == outcome2[0] && outcome1[0] != outcome3[0]) {
+                winnings = Math.round(bet * (.45 * outcome1[1]));
+            }
+            else if (outcome1[0] == outcome3[0] && outcome1[0] != outcome2[0]) {
+                winnings = Math.round(bet * (.5 * outcome1[1]));
+            }
+            else if (outcome2[0] == outcome3[0] && outcome2[0] != outcome1[0]) {
+                winnings = Math.round(bet * (.40 * outcome2[1]));
+            }
+            else{
+                winnings = 0;  
+            }
+                        
+            return [outcome1[0], outcome2[0], outcome3[0], winnings];                      
+        }
+        
+        //Validate Tokens
+        function validateTokens(user){
+            var tokens; 
+            
+            //Check for existing user tokens
+            if (localStorage.getItem(user) == null || localStorage.getItem(user) == "undefined") {
+                 localStorage.setItem(user, "10");
+                 tokens = localStorage.getItem(user);
+            }
+            else if (localStorage.getItem(user) !== null  && localStorage.getItem(user) !== "undefined") {
+                 tokens = localStorage.getItem(user);
+            }
+            else {
+                 tokens = localStorage.getItem(user);
+            }
+            
+            return tokens;
+        }
+        
+        function checkTokens(bet, user) {
+             var tokensPreBet = validateTokens(user);
+             var tokensPostBet;
+             var validBet = true;
+
+             //Adjust amount of tokens
+             if (bet > tokensPreBet || bet < 0) {
+                  validBet = false;
+                  tokensPostBet = tokensPreBet;
+             }
+             else {
+                  tokensPostBet = tokensPreBet - bet;
+             }
+             
+             localStorage.setItem(user, tokensPostBet);
+             return [tokensPreBet, tokensPostBet, validBet];
+        }
+        
+        function slotWinnings(winnings, user) {
+             var userTokens = parseInt(localStorage.getItem(user)) + winnings;
+             if (isNaN(userTokens)) {
+                 userTokens = winnings;
+             }
+             localStorage.setItem(user, userTokens);
+             return userTokens;
+        }
+
     function decodeEntities(s) {
         var str, temp = document.createElement('p');
         temp.innerHTML = s;
         str = temp.textContent || temp.innerText;
         temp = null;
         return str;
+    };
+    
+    function decodeEmoji(s)
+    {
+        
+            var wemo = s;
+            var first = 0;
+            var second = 0;
+            var firstFound = false;
+            var isIs = false;
+            
+            for(var i = 0;i < s.length; i++)
+            {
+                if(wemo.charAt(i) == ':' && !firstFound)
+                {
+                    first = i;
+                    firstFound = true;
+                }else if (wemo.charAt(i) == ':')
+                {
+                        second = i;
+                        var possemo = "";
+                        possemo = bBot.emojimap[wemo.slice(first +1 ,second)];
+                        if(possemo != null)
+                        {
+                            var possemo2 = ':'+wemo.slice(first +1,second)+':';
+                            s = s.replace(possemo2,possemo);
+                            firstFound = false;
+                            s = decodeEmoji(s);
+                        }
+                        else
+                        {
+                            firstFound = true;
+                            first = second;
+                        }
+                        
+                }
+            }
+            return s;
     };
 
     var botCreator = "Yemasthui";
@@ -3682,6 +3823,204 @@
                                 }
 
                                 API.sendChat(subChat(basicBot.chat.whois, {name1: chat.un, name2: name, id: id, avatar: avatar, profile: profile, language: language, level: level, joined: joined, rank: rank}));
+                            }
+                        }
+                    }
+                }
+            },
+            
+            TruthCommand: {
+                command: 'truth',
+                rank: 'user',
+                type: 'startsWith',
+                getTruth: function (chat) {
+                    var c = Math.floor(Math.random() * BMBot.chat.Truths.length);
+                    return BMBot.chat.Truths[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!BMBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(subChat(BMBot.chat.truth, {name: chat.un, fortune: this.getTruth()}));
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = BMBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat(subChat(BMBot.chat.trutherror, {name: name}));
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat(subChat(BMBot.chat.trutherror, {name: name}));
+                            }
+                            else {
+                                return API.sendChat(subChat(BMBot.chat.trutherror, {name: name}));
+                            }
+                        }
+                    }
+                }
+            },
+            
+            loveCommand: {
+			command: ['love'],
+			rank: 'user',
+			type: 'exact',
+			functionality: function(chat, cmd) {
+				if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
+				if (!BMBot.commands.executable(this.rank, chat)) return void(0);
+				else {
+					var love = ""
+
+					for (var i = 0; i < (Math.floor((Math.random() * 10) + 1)); i++) {
+						var love = love + ":heart: "
+					}
+
+					API.sendChat("/me @" + chat.un + " : " + love);
+				}
+			}
+		},
+            
+                slotsCommand: { 
+            command: ['slots', 'slot'],  //The command to be called. With the standard command literal this would be: !slots
+            rank: 'user', 
+            type: 'startsWith',  
+            functionality: function (chat, cmd) { 
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0); 
+                if (!bBot.commands.executable(this.rank, chat)) return void (0); 
+                else { 
+                    var msg = chat.message; 
+                    var space = msg.indexOf(' ');
+                    var user = chat.un; 
+                    var updatedTokens;
+                    var bet = parseInt(msg.substring(space + 1));
+       
+                    //Fix bet if blank
+                    if (bet == null || isNaN(bet)) {
+                        bet = 1;
+                    }
+                    bet = Math.round(bet);   5   
+                                   
+                    var playerTokens = checkTokens(bet, user);  
+                    
+                    //Prevent invalid betting
+                    if (bet > playerTokens[0]) {
+                        if (playerTokens[0] === 0){
+                            return API.sendChat("/me [!slots] @" + chat.un + " pokusava iskoristiti " + bet + " TOKEn na ChemSlots, ali nema ni jedan! Kako neugodno."); 
+                        } 
+                        else if (playerTokens[0] === 1) {
+                            return API.sendChat("/me [!slots] @" + chat.un + " pokusava iskoristiti " + bet + " TOKEn na ChemSlots, ali ima samo jedan TOKEn! Mislis da imas srece?"); 
+                        }
+                        else {
+                            return API.sendChat("/me [!slots] @" + chat.un + " pokusava iskoristiti " + bet + " TOKEn na ChemSlots, ali ima samo " + playerTokens[0] + " TOKEna! Kako neugodno."); 
+                        }
+                    }
+                    else if (bet < 0) {
+                        return API.sendChat("/me [!slots] @" + chat.un + " pokusava iskoristit " + bet + " TOKEn na ChemSlots... ali nije uspio."); 
+                    }
+                    else if (bet === 0) { 
+                        return API.sendChat("/me [!slots] @" + chat.un + " pokusava se kladiti u nista ... ne mozes igrati za dzabe! Bas si jeftin."); 
+                    }
+                    //Process valid bets
+                    else {
+                        var outcome = spinOutcome(bet);
+                        updatedTokens = slotWinnings(outcome[3], user);
+                    }
+                    
+                    //Display Slots
+                    if (space === -1 || bet == 1) { 
+                        //Start Slots
+                        API.sendChat("/me [!slots] @" + chat.un + " ulaže 1 TOKEn na ChemSlots, i povlači ručicu ... i gleda kako se ChemSlots okrece.");
+                        setTimeout(function() {API.sendChat("/me  Napokon se zaustavlja na: " + outcome[0] + outcome[1] + outcome[2])}, 5000);
+                    } 
+                    else if (bet > 1) { 
+                        //Start Slots
+                        API.sendChat("/me [!slots] @" + chat.un + " ulaže " + bet + " TOKEna na ChemSlots, i povlači ručicu... ... i gleda kako se ChemSlots okrece.");
+                        setTimeout(function() {API.sendChat("/me Napokon se zaustavlja na: " + outcome[0] + outcome[1] + outcome[2])}, 5000);
+                    } 
+                    else {
+                        return false; 
+                    }
+                         
+                    //Display Outcome
+                    if (outcome[3] == 0) {
+                        if (updatedTokens === 1) {
+                            setTimeout(function() {API.sendChat("/me @" + chat.un + ", nemaš sreće, luzeru! Nisi pobjedio. Imas 1 TOKEn. Čuo sam da je kockanje zarazno... želis pokušati ponovo?")}, 7000);   
+                        }  
+                        else if (updatedTokens === 0) {
+                            setTimeout(function() {API.sendChat("/me @" + chat.un + ", nemaš sreće, luzeru! Nisi pobjedio. Nemas vise TOKena... gotov si, ya bum!")}, 7000);
+                        }
+                        else {
+                            setTimeout(function() {API.sendChat("/me @" + chat.un + ", nemaš sreće, luzeru! Nisi dobio nista. Imas " + updatedTokens + " TOKEna. Čuo sam da je kockanje zarazno... želis pokušati ponovo?")}, 7000);
+                        }
+                    }
+                    else if (outcome[3] == (bet * 7)) {
+                        setTimeout(function() {
+                        var id = chat.uid;
+                        API.sendChat("/me @" + chat.un + ", Pogodio si Jackpot: " + outcome[3] + " TOKEna! Sada imaš " + updatedTokens + " Nemoj ih sve odjednom potrošit.");
+                        bBot.userUtilities.moveUser(id, 1, false);}, 7000); 
+                    }
+                    else {
+                        setTimeout(function() {
+                 var id = chat.uid;
+				 var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
+                 API.sendChat("/me @" + chat.un + ", Pobjedio si! Dobio si " + outcome[3] + " TOKEna! Sada imaš " + updatedTokens + " TOKEna. Možda da pokušaš ponovo?");
+                 bBot.userUtilities.moveUser(id, pos, false);}, 7000);
+                    }
+                } 
+            } 
+        }, 
+        
+        // !tokens
+        tokensCommand: { 
+            command: 'tokens', 
+            rank: 'user', 
+            type: 'exact', 
+            functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bBot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                    var user = chat.un;
+                    var tokens = validateTokens(user);
+                    
+                    API.sendChat("/me [!tokens] @" + user + ", imas " + tokens + " TOKEna.");
+                }
+            }
+        },
+            
+            fortunecookieCommand: {
+                command: 'fcookie',
+                rank: 'user',
+                type: 'startsWith',
+                getFcookie: function (chat) {
+                    var c = Math.floor(Math.random() * BMBot.chat.fcookies.length);
+                    return BMBot.chat.fcookies[c];
+                },
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!BMBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+
+                        var space = msg.indexOf(' ');
+                        if (space === -1) {
+                            API.sendChat(subChat(BMBot.chat.fortunecookie, {name: chat.un, fortune: this.getFcookie()}));
+                            return false;
+                        }
+                        else {
+                            var name = msg.substring(space + 2);
+                            var user = bBot.userUtilities.lookupUserName(name);
+                            if (user === false || !user.inRoom) {
+                                return API.sendChat(subChat(BMBot.chat.selffortuneccookie, {name: name}));
+                            }
+                            else if (user.username === chat.un) {
+                                return API.sendChat(subChat(BMBot.chat.selffortuneccookie, {name: name}));
+                            }
+                            else {
+                                return API.sendChat(subChat(BMBot.chat.selffortuneccookie, {name: name}));
                             }
                         }
                     }
