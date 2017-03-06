@@ -3834,31 +3834,31 @@
                 rank: 'user',
                 type: 'startsWith',
                 getTruth: function (chat) {
-                    var c = Math.floor(Math.random() * BMBot.chat.Truths.length);
-                    return BMBot.chat.Truths[c];
+                    var c = Math.floor(Math.random() * bBot.chat.Truths.length);
+                    return bBot.chat.Truths[c];
                 },
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!BMBot.commands.executable(this.rank, chat)) return void (0);
+                    if (!bBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         var msg = chat.message;
 
                         var space = msg.indexOf(' ');
                         if (space === -1) {
-                            API.sendChat(subChat(BMBot.chat.truth, {name: chat.un, fortune: this.getTruth()}));
+                            API.sendChat(subChat(bBot.chat.truth, {name: chat.un, fortune: this.getTruth()}));
                             return false;
                         }
                         else {
                             var name = msg.substring(space + 2);
-                            var user = BMBot.userUtilities.lookupUserName(name);
+                            var user = bBot.userUtilities.lookupUserName(name);
                             if (user === false || !user.inRoom) {
-                                return API.sendChat(subChat(BMBot.chat.trutherror, {name: name}));
+                                return API.sendChat(subChat(bBot.chat.trutherror, {name: name}));
                             }
                             else if (user.username === chat.un) {
-                                return API.sendChat(subChat(BMBot.chat.trutherror, {name: name}));
+                                return API.sendChat(subChat(bBot.chat.trutherror, {name: name}));
                             }
                             else {
-                                return API.sendChat(subChat(BMBot.chat.trutherror, {name: name}));
+                                return API.sendChat(subChat(bBot.chat.trutherror, {name: name}));
                             }
                         }
                     }
