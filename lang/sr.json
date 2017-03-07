@@ -175,7 +175,7 @@
     "welcomeback": "\/me Dobrodo\u0161ao nazad, %%NAME%%",
     "songknown": "\/me @%%NAME%%, Ova pesma je u DJ istoriji.",
     "trutherror": "/me [Truth] %%NAME%% Greska.. Pokusaj ponovo, vjerovatno si oznacio nekoga.",
-    "truth": "/me [!truth] @%%NAMETO%%, @%%NAMEFROM%% %%FORTUNE%%",
+    "truth": "/me [!truth] @%%NAMETO%%, @%%NAMEFROM%% %%TRUTH%%",
     "fortunecookie": "/me @%%NAMETO%%, @%%NAMEFROM%% %%FORTUNE%%",
     "notavailable": "\/me @%%NAME%%, the song you played was not available.",
     "timelimit": "\/me @%%NAME%%, Tvoja pesma je duza od %%MAXLENGTH%% minuta, potrebna ti je dozvola da pustas duze pesme.",
