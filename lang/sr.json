@@ -314,7 +314,7 @@
     "youtube": "\/me [%%NAME%%] Pretplatite se na na\u0161 YouTube kanal: %%LINK%%",
     "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
     "thorNotClose": "\/me @%%NAME%%, Nisi dostojan da budes pored cekica :hammer:!",
-    "thorcd": "\/me @%%NAME%% Mozes da podignes cekic za %%TIME%% .",
+    "thorcd": "\/me @%%NAME%% Mozes da podignes cekic za %%TIME%% minuta .",
     "thorWorthy": "\/me @%%NAME%% Uspeo si :hammer:, Cestitke!",
     "thorNotWorthy": "\/me @%%NAME%% Nisi dostojan cekica."
 }
