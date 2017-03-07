@@ -247,7 +247,7 @@
     "afkstatusreset": "\/me [@%%NAME%%] Je resetovao AFK status od @%%USERNAME%%.",
     "inactivefor": "\/me [@%%NAME%%] @%%USERNAME%% je neaktivan ve\u0107 %%TIME%%.",
     "inactivelonger": "\/me [@%%NAME%%] @%%USERNAME%% je neaktivan du\u017ee nego sto je %%BOTNAME%% online.",
-    "autowoot": "\/me Mi preporu\u010dujemo PlugCubed za  automatsko glasanje: http:\/\/plugcubed.net\/",
+    "autowoot": "\/me Mi preporu\u010dujemo ORIGEM za  automatsko glasanje: www.origem-woot.tk",
     "brandambassador": "\/me Brand Ambassador je glas plug.dj korisnika. Oni promovi\u0161u doga\u0111aje, spajaju zajednicu i dele poruke plug.dj-a \u0161irom sveta. Za vi\u0161e informacija: https:\/\/plug.dj\/ba",
     "bouncerplusrank": "\/me [@%%NAME%%] Moras biti Mena\u0111er ili vi\u0161i rank da bi uklju\u010dio Bouncer+.",
     "chatcleared": "\/me [@%%NAME%%] Je o\u010distio chat.",
