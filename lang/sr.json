@@ -175,7 +175,7 @@
     "welcomeback": "\/me Dobrodo\u0161ao nazad, %%NAME%%",
     "songknown": "\/me @%%NAME%%, Ova pesma je u DJ istoriji.",
     "trutherror": "/me [Truth] %%NAME%% Greska.. Pokusaj ponovo, vjerovatno si oznacio nekoga.",
-    "truth": "/me [!truth] %%NAMETO%%, %%FORTUNE%%",
+    "truth": "/me [!truth] %%NAME%%, %%FORTUNE%%",
     "fortunecookie": "/me %%NAME%% %%FORTUNE%%",
     "notavailable": "\/me @%%NAME%%, the song you played was not available.",
     "timelimit": "\/me @%%NAME%%, Tvoja pesma je duza od %%MAXLENGTH%% minuta, potrebna ti je dozvola da pustas duze pesme.",
@@ -313,7 +313,7 @@
     "website": "\/me Molimo posetite nasu web stranicu: %%LINK%%",
     "youtube": "\/me [%%NAME%%] Pretplatite se na na\u0161 YouTube kanal: %%LINK%%",
     "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
-    "thorNotClose": "\/me @%%NAME%%, you're not worthy of getting close to the hammer!",
+    "thorNotClose": "\/me @%%NAME%%, Nisi dostojan da budes pored cekica :hammer:!",
     "thorcd": "\/me @%%NAME%% Mozes da podignes cekic za %%TIME%% .",
     "thorWorthy": "\/me @%%NAME%% Uspeo si :hammer:, Cestitke!",
     "thorNotWorthy": "\/me @%%NAME%% Nisi dostojan cekica."
