@@ -238,6 +238,7 @@
     "songstats": "statistika pesme",
     "etarestriction": "eta ograni\u010denje",
     "voteskip": "glasaj skip",
+    "discord": "/me [%%NAME%%] Udjite na nasu discord sobu i zabavite se: %%LINK%%",
     "voteskiplimit": "\/me [@%%NAME%%] GlasajSkip trenutno pode\u0161en na %%LIMIT%% mehova.",
     "voteskipexceededlimit": "\/me @%%NAME%%, tvoja pesma je prekora\u010dila GlasajSkip limit (%%LIMIT%% mehova).",
     "voteskipinvalidlimit": "\/me [@%%NAME%%] Pogre\u0161an GlasajSkip limit, molim poku\u0161aj ponovo koriste\u0107i brojeve koje odgovaraju broju mehova.",
