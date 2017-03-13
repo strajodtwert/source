@@ -173,7 +173,7 @@
 	
 	
     "online": "\/me %%BOTNAME%% %%VERSION%% :white_check_mark: uspesno aktiviran! :white_check_mark: ",
-    "welcome": "\/me :white_check_mark: Dobrodo\u0161ao u sobu BalkanMusic zabavi se i uzivaj uz muziku i caskanje sa drugim ljudima, Pravila i ostale linkove mozes pronaci u opisu sobe %%NAME%%  :white_check_mark: ",
+    "welcome": "\/me :white_check_mark: Dobrodo\u0161ao u sobu BalkanMusic %%NAME%% , zabavi se i uzivaj uz muziku i caskanje sa drugim ljudima, Pravila i ostale linkove mozes pronaci u opisu sobe :white_check_mark: ",
     "welcomeback": "\/me Dobrodo\u0161ao nazad, %%NAME%%",
     "songknown": "\/me @%%NAME%%, Ova pesma je u DJ istoriji.:bangbang::bangbang:",
     "trutherror": "/me [Truth] %%NAME%% Greska.. Pokusaj ponovo, vjerovatno si oznacio nekoga.",
