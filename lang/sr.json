@@ -317,7 +317,7 @@
     "voteratio": "\/me [@%%NAME%%] @%%USERNAME%% ~ Wotovi: %%WOOT%%, Mehovi: %%MEHS%%, Razmer(w\/m): %%RATIO%%.",
     "website": "\/me Molimo posetite nasu web stranicu: %%LINK%%",
     "youtube": "\/me [%%NAME%%] Pretplatite se na na\u0161 YouTube kanal: %%LINK%%",
-    "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: Ova pesma je stvarno super :heart: %%WOOTS%%:thumbsup:\/%%GRABS%%:green_heart:\/%%MEHS%%:-1:.",
+    "songstatistics": "\/me %%ARTIST%% - %%TITLE%%:  %%WOOTS%% :thumbsup:  \/%%GRABS%% :green_heart: \/%%MEHS%% :-1:.",
     "thorNotClose": "\/me @%%NAME%%, Nisi dostojan da budes pored cekica :hammer:!",
     "thorcd": "\/me @%%NAME%% Mozes da podignes cekic za %%TIME%% minuta .",
     "thorWorthy": "\/me @%%NAME%% Uspeo si :hammer:, Cestitke!",
