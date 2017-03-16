@@ -299,7 +299,7 @@
             themeLink: null,
             fbLink: "https://www.facebook.com/BalkanMusic-plugdj-257136237998524/",
             youtubeLink: null,
-            discordLink: "https://discord.gg/jAFhCA2"
+            discordLink: "https://discord.gg/jAFhCA2",
             website: "https://balkanmusicap.000webhostapp.com/",
             intervalMessages: [],
             messageInterval: 5,
@@ -323,7 +323,7 @@
             allcommand: true,
             afkInterval: null,
             //autoskip: false,
-            autoskipTimer: null,
+,            autoskipTimer: null,
             autodisableInterval: null,
             autodisableFunc: function () {
                 if (basicBot.status && basicBot.settings.autodisable) {
