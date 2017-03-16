@@ -3810,7 +3810,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        if (typeof basicBot.settings.discordLind === "string")
+                        if (typeof basicBot.settings.discordLink === "string")
                             API.sendChat(subChat(basicBot.chat.discord, {name: chat.un, link: basicBot.settings.discordLink}));
                     }
                 }
