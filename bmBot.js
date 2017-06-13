@@ -251,7 +251,7 @@
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 100, // 1-200
             startupVolume: 0, // 0-100
-            startupEmoji: true, // true or false
+            startupEmoji: false, // true or false
             autowoot: true,
             autoskip: false,
             smartSkip: true,
@@ -327,6 +327,7 @@
             autodisableFunc: function () {
                 if (basicBot.status && basicBot.settings.autodisable) {
                     API.sendChat('!roulette');
+	            API.sendChat('!commands');
                 }
             },
             queueing: 0,
