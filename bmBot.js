@@ -299,7 +299,7 @@
             themeLink: null,
             fbLink: "https://www.facebook.com/BalkanMusic-plugdj-257136237998524",
             youtubeLink: null,
-            website: "https://balkanmusics.000webhostapp.com",
+            website: "https://www.origem-woot.tk/ext",
             intervalMessages: [],
             messageInterval: 5,
             songstats: true,
