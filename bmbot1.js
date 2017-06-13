@@ -237,7 +237,7 @@
         name: "BalanMusicBOT",
         loggedInID: null,
         scriptLink: "https://rawgit.com/strajodtwert/source/master/bmmBot.js",
-        cmdLink: "https://balkanmusicbotkomande.000webhostapp.com/",
+        cmdLink: "https://bmbotkomande.000webhostapp.com/",
         chatLink: "https://rawgit.com/strajodtwert/source/master/lang/sr.json",
         chat: null,
         loadChat: loadChat,
