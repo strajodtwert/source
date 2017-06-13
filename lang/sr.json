@@ -197,7 +197,7 @@
     "noposition": "\/me Zadnja pozicija nepoznata. Listu cekanja treba a\u017eurirati najmanje jednom da bi se registrovala zadnja pozicija korisnika.",
     "toolongago": "\/me @%%NAME%% zadnji diskonekt (DC ili leave) je bio davno: %%TIME%%.",
     "valid": "\/me @%%NAME%% se diskonektovao pre %%TIME%% i trebao bi biti na poziciji %%POSITION%%.",
-    "discord": "\/me Posetite nasu discord sobu: %%LINK%%",
+    "discord": "\/me @%%NAME%%, Posetite nasu discord sobu: %%LINK%%",
     "warning1": "\/me @%%NAME%%, ti si afk %%TIME%%, molim odgovori u roku od 2 min ili \u0107e\u0161 biti uklonjen sa liste \u010dekanja.",
     "warning2": "\/me @%%NAME%%, uskoro \u0107e\u0161 biti uklonjen sa liste zbog AFK ukoliko ne odgovori\u0161.",
     "afkremove": "\/me @%%NAME%%, izba\u010den si sa liste \u010dekanja zbog afk %%TIME%%. Bio si na poziciji %%POSITION%%. Pi\u0161i bar svako %%MAXIMUMAFK%% minuta ako zeli\u0161 da pu\u0161ta\u0161 pesme.",
