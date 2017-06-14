@@ -327,8 +327,9 @@
             autodisableInterval: null,
             autodisableFunc: function () {
                 if (basicBot.status && basicBot.settings.autodisable) {
-                    API.sendChat('!roulette');
-	            API.sendChat('!commands');
+                        API.sendChat('!discord');
+			API.sendChat('!roulette');
+	         
                 }
             },
             queueing: 0,
