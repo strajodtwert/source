@@ -299,7 +299,7 @@
             themeLink: null,
             fbLink: "https://www.facebook.com/BalkanMusic-plugdj-257136237998524",
             youtubeLink: null,
-            discord: "https://discord.gg/jAFhCA2",
+            discord: "https://discord.gg/R6EQCZ",
             website: "https://www.origem-woot.tk/ext",
             intervalMessages: [],
             messageInterval: 5,
