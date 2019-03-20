@@ -236,9 +236,9 @@
         status: false,
         name: "BalanMusicBOT",
         loggedInID: null,
-        scriptLink: "https://rawcdn.githack.com/strajodtwert/source/master/bmBot.js",
+        scriptLink: "https://raw.githack.com/strajodtwert/source/master/bmbot1.js",
         cmdLink: "https://bmbotkomande.000webhostapp.com/",
-        chatLink: "https://rawcdn.githack.com/strajodtwert/source/master/lang/sr.json",
+        chatLink: "https://raw.githack.com/strajodtwert/source/master/lang/sr.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -246,8 +246,8 @@
         settings: {
             botName: "BalkanMusicBOT",
             language: "serbian",
-            chatLink: "https://rawcdn.githack.com/strajodtwert/source/master/lang/sr.json",
-            scriptLink: "https://rawcdn.githack.com/strajodtwert/source/master/bmBot.js",
+            chatLink: "https://raw.githack.com/strajodtwert/source/master/lang/sr.json",
+            scriptLink: "https://raw.githack.com/strajodtwert/source/master/bmbot1.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 100, // 1-200
             startupVolume: 0, // 0-100
