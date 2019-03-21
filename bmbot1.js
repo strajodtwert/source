@@ -91,7 +91,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/strajodtwert/source/master/lang/LangIndex.json", function (json) {
+        $.get("https://raw.githack.com/strajodtwert/source/master/lang/LangIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
